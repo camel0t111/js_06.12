@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>index1</title>
+	<script>
+		function mOfStyles(ArrayOfStyles, text) 
+		{
+			let styles = "";
+			for (let i = 0; i < ArrayOfStyles.length; i++) 
+			{
+				let style = ArrayOfStyles[i];
+				styles += style.name + ": " + style.value + "; ";
+			}
+			document.write('<p style="' + styles + '">' + text + '</p>');
+		}
+		const ArrayOfStyles = 
+		[
+			{ name: "color", value: "green" },
+			{ name: "font-size", value: "30px" },
+			{ name: "text-decoration", value: "underline" },
+			{ name: "font-weight", value: "600" },
+			{ name: "text-align", value: "center" },
+			{ name: "line-height", value: "100px" },
+			{ name: "text-transform", value: "uppercase"}
+		];
+		const text = "текст <br> текст <br> текст <br>";
+		mOfStyles(ArrayOfStyles, text);
+	</script>
+</head>
+<body>
+</body>
+</html>
